@@ -1,5 +1,5 @@
 /*
- * This macro demonstrates how to parse the metadata from an image file name, for an image acquired with an IM04. 
+ * This macro demonstrates how to parse the metadata from an image file name, for an image acquired with an Imaging Machine. 
  * You can directly run this macro, it is preconfigured with an example filename.
  * The metadata will be printed to a log window.
  * 
@@ -7,9 +7,13 @@
  * 2 different macro extensions cannot be loaded simultaneously (if you need functionalities from another update site/package).
  * However, you can load another extension at the end of this script for instance, such that Ext will be refering to this new extension, and not to the Acquifer extension anymore.
  */
+
 run("Acquifer IM04 macro extensions");  // this line is necessary to have access to the acquifer macro-functions via the Ext mechanism
+//run("Acquifer IM03 macro extensions"); // uncomment this line for IM03
 
 filename = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif";
+//filename = "WE00020---B005--PO01--LO001--CO6--SL010--PX16250--PW0040--IN0020--TM246--X050299--Y019906--Z212275--T1375574652.tif"; // uncomment this line for IM03
+
 print("Image name :", filename);
 
 ID = Ext.getWellId(filename);
@@ -51,7 +55,7 @@ print("Objective Magnification (X):", mag);
 Ext.getObjectiveNA(filename, NA);
 print("Objective NA :", NA);
 
-Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ, hence the syntax coloring in yellow, but they dont conflict ;)
+Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ!!
 print("Pixel Size (um) : ", pixSize);
 
 Ext.getLoopIteration(filename, iteration);

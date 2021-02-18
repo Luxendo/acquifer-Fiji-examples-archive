@@ -1,14 +1,17 @@
 """
-This jython script demonstrates the parsing of metadata from image filename for images acquired with an IM04.
+This jython script demonstrates the parsing of metadata from image filename for images acquired with an Imaging Machine.
 This script can be directly run in the Fiji script editor.
 It relies on the acquifer-core java package, shipped with the acquifer update site.
 These functions can also be used in other java programs, as long as the acquifer-core package is available.
 """
 from acquifer.im04 import MetadataParser
+#from acquifer.im03 import MetadataParser # Uncomment this line for IM03
 
 parser = MetadataParser()
 
 filename = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif";
+# Uncomment the following line for IM03
+#filename = "WE00019---B006--PO01--LO001--CO6--SL010--PX16250--PW0040--IN0020--TM246--X059308--Y019906--Z212725--T1375564662.tif" # example filename
 
 print "Image name :", filename
 

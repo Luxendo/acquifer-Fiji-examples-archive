@@ -8,9 +8,14 @@ the following variables should be updated to match your local image dataset:
 from acquifer.im04         import FileUtils, MetadataParser
 from acquifer.im04.plugins import Hyperstack_Maker_IM04
 
-inputDir = r"C:\Users\Laurent Thomas\Documents\Acquifer\DataSet\Fish\Clicking_AppNote96" # IM04
+"""
+# Use following imports for IM03
+from acquifer.im03         import FileUtils, MetadataParser
+from acquifer.im03.plugins import Hyperstack_Maker_IM03
+"""
+inputDir = r"C:\Users\Laurent Thomas\Documents\Acquifer\DataSet\Fish\Clicking_AppNote96"
 
-# Select one well and subposition
+# Select a single well and single subposition
 selectedWell = ["A002"]
 selectedSubpositions = [1] # first subposition
 listChannel   = None # if None or [], all available channels will be displayed, same for other dimensions
@@ -40,4 +45,6 @@ printAligned(listInfos)
 
 # Make hyperstacks
 hyperstack = Hyperstack_Maker_IM04().makeHyperStack(listInfos)
+#hyperstack = Hyperstack_Maker_IM03().makeHyperStack(listInfos) # uncomment this line and comment previous line for IM03
+
 hyperstack.show()

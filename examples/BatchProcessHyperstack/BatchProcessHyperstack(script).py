@@ -8,7 +8,6 @@ Even if no projection was done (in this case, proj is just null).
 Contrary than with macros, it is not necessary to display the images to process them with custom scripts.
 The ImagePlus object in memory is directly passed from the batch-hyperstack plugin to the script, in a "headless" fashion.
 """
-
 #@ImagePlus stack
 #@ImagePlus proj
 from ij import IJ
