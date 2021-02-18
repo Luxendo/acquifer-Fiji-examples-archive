@@ -2,7 +2,7 @@
 From a directory, a well and subposition, this scripts list the image files and make a hyperstack for a selected well and subposition.
 the following variables should be updated to match your local image dataset:
 - inputDir
-- selectedWell and selecteSubpositions
+- selectedWell and selectedSubpositions
 - listChannel, Zslice and Timepoint
 """
 from acquifer.im03         import FileUtils, MetadataParser
