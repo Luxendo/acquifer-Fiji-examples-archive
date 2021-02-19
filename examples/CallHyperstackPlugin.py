@@ -4,7 +4,7 @@ Either using macro-recording which will give you something like IJ.run(..)
 Or using the command below.
 """
 from acquifer.im04.plugins import Hyperstack_Maker
-#from acquifer.im04.plugins import Hyperstack_Maker # Uncoment this line for IM03
+#from acquifer.im03.plugins import Hyperstack_Maker # Uncoment this line for IM03
 
 # Call the plugin
-Hyperstack_Maker.run()
+Hyperstack_Maker().run()
