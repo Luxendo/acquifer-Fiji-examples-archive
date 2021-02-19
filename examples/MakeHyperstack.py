@@ -6,7 +6,7 @@ the following variables should be updated to match your local image dataset:
 - listChannel, Zslice and Timepoint
 """
 from acquifer.im04         import FileUtils, MetadataParser
-from acquifer.im04.plugins import Hyperstack_Maker_IM04
+from acquifer.im04.plugins import Hyperstack_Maker
 
 """
 # Use following imports for IM03
@@ -44,7 +44,5 @@ print "\nImages metadata"
 printAligned(listInfos)
 
 # Make hyperstacks
-hyperstack = Hyperstack_Maker_IM04().makeHyperStack(listInfos)
-#hyperstack = Hyperstack_Maker_IM03().makeHyperStack(listInfos) # uncomment this line and comment previous line for IM03
-
+hyperstack = Hyperstack_Maker().makeHyperStack(listInfos)
 hyperstack.show()
