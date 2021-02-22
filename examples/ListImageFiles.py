@@ -9,6 +9,7 @@ Similar scripts in other scripting language can be written by adapting the impor
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
+from acquifer.im   import ImageInfos
 from acquifer.im04 import FileUtils, MetadataParser
 #from acquifer.im03 import FileUtils, MetadataParser # For an IM03 dataset, simply replace the import statment from the previous line with this line
 
@@ -29,12 +30,12 @@ printAligned(listFull)
 
 # Add filters for specific wells 
 # If none, no filter is applied for this dimension
-listWell = ["A002","B010"]
 listSubpositions = None 
 listChannel = None
 listZslice = None
 listTimepoint = None
 
+listWell = ["A002","B001","B002","B003","B010"]
 listFiltered = utils.getListImageFiles(image_directory, 
 										listWell, 
 										listSubpositions, 
@@ -49,4 +50,6 @@ parser = MetadataParser()
 listInfos = parser.getImagesInfos(listFiltered)
 
 print "\nImages metadata"
-printAligned(listInfos)
+printAligned(listInfos)# List wells actually present in the dataset
+print "\nUnique wells"
+print ImageInfos.listUniqueWells(listInfos)
