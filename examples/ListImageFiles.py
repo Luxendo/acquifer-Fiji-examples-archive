@@ -52,6 +52,7 @@ listInfos = parser.getImagesInfos(listFiltered)
 
 print "\nImages metadata"
 printAligned(listInfos)
+
 # List wells actually present in the dataset
 print "\nUnique wells"
 print ImageInfos.listUniqueWells(listInfos)
