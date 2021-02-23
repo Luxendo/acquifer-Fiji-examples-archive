@@ -48,7 +48,7 @@ printAligned(listFiltered)
 
 # Parse the metadata for the list of image files that were filtered
 parser = MetadataParser()
-listInfos = parser.getImagesInfos(listFiltered)
+listInfos = utils.getListImagesInfos(listFiltered)
 
 print "\nImages metadata"
 printAligned(listInfos)

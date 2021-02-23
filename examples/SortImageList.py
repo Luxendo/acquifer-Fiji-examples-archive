@@ -28,7 +28,7 @@ listFiles = utils.getListImageFiles(image_directory)
 
 # Get ImageInfos
 parser = MetadataParser()
-listInfos = parser.getImagesInfos(listFiles)
+listInfos = utils.getListImagesInfos(listFiles)
 
 print "\nImages metadata (unsorted)"
 printAligned(listInfos)

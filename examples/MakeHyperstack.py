@@ -39,7 +39,7 @@ print "\nList files"
 printAligned(listFiltered)
 
 # Get metadatas
-listInfos = MetadataParser().getImagesInfos(listFiltered)
+listInfos = FileUtils().getListImagesInfos(listFiltered)
 print "\nImages metadata"
 printAligned(listInfos)
 
