@@ -8,9 +8,10 @@ You can consult the GenericDialog API documentation at:
 https://imagej.nih.gov/ij/developer/api/ij/gui/GenericDialog.html
 
 and the BatchDialog API documentation at: 
-https://acquifer.github.io/acquifer-IJ/acquifer/gui/BatchDialog.html
+https://acquifer.github.io/acquifer-IJ/acquifer/im/BatchDialog.html
 """
-from acquifer.gui import BatchDialog 
+from acquifer.im04 import BatchDialog 
+#from acquifer.im03 import BatchDialog # Uncomment for IM03
 from ij import IJ
 
 dialog = BatchDialog("Test batch dialog") 
