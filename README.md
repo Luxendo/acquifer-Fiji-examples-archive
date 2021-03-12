@@ -1,4 +1,4 @@
-# Fiji-examples
+# Fiji-scripting with the ACQUIFER tools
 Example macros (.ijm) and jython scripts (.py) demonstrating useful functions provided by the Acquifer update site in Fiji, or more generally by the acquifer java packages.  
 Some of these examples are also shipped with the acquifer update site, and are available in the menu *Acquifer > Examples*.  
 
