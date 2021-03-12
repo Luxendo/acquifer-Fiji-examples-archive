@@ -6,6 +6,11 @@
  * The first line loads the Acquifer macro extension, which allows calling the functions using the "Ext" mechanism.
  * 2 different macro extensions cannot be loaded simultaneously (if you need functionalities from another update site/package).
  * However, you can load another extension at the end of this script for instance, such that Ext will be refering to this new extension, and not to the Acquifer extension anymore.
+ *
+ * NOTE : When open via the menu ACQUIFER > Examples, this script file opens as a temporary file.
+ * Changes to this file will thus NOT be saved, in particular the next time you open this example via the menu, the original example will be shown.
+ * Use File > Save As... to save a copy of this example, and keep your modificationss.
+ * You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
  */
 
 run("Acquifer IM04 macro extensions");  // this line is necessary to have access to the acquifer macro-functions via the Ext mechanism

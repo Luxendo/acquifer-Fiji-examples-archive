@@ -7,6 +7,11 @@ Even if no projection was done (in this case, proj is just null).
 
 Contrary than with macros, it is not necessary to display the images to process them with custom scripts.
 The ImagePlus object in memory is directly passed from the batch-hyperstack plugin to the script, in a "headless" fashion.
+
+NOTE : When open via the menu ACQUIFER > Examples, this script file opens as a temporary file.
+Changes to this file will thus NOT be saved, in particular the next time you open this example via the menu, the original example will be shown.
+Use File > Save As... to save a copy of this example, and keep your modifications.
+You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
 """
 #@ImagePlus stack
 #@ImagePlus proj

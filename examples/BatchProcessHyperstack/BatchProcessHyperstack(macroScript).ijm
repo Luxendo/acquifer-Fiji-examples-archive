@@ -10,6 +10,11 @@
  *
  * Contrary to other scripting languages, macros require to display the images, which is automatically done if an ijm script is provided, and displaying is not selected in the plugin interface. 
  * However, you can turn on the headless mode in your macro to process the images without systematically updating the display.
+ * 
+ * NOTE : When open via the menu ACQUIFER > Examples, this script file opens as a temporary file.
+ * Changes to this file will thus NOT be saved, in particular the next time you open this example via the menu, the original example will be shown.
+ * Use File > Save As... to save a copy of this example, and keep your modifications.
+ * You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
  */
 
 // Every script/macro should have these 2 script-parameters, which get populated by the plugin.
