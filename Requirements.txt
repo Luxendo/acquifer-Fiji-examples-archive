@@ -1,0 +1,2 @@
+acquifer-core = 0.0.3
+acquifer-IJ = 0.0.2
