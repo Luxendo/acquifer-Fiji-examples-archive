@@ -44,10 +44,10 @@ print "\nList files"
 printAligned(listFiltered)
 
 # Get metadatas
-listInfos = FileUtils().getListImagesInfos(listFiltered)
+listMetadatas = FileUtils().getListMetadatas(listFiltered)
 print "\nImages metadata"
-printAligned(listInfos)
+printAligned(listMetadatas)
 
 # Make hyperstacks
-hyperstack = Hyperstack_Maker().makeHyperStack(listInfos)
+hyperstack = Hyperstack_Maker().makeHyperStack(listMetadatas)
 hyperstack.show()
