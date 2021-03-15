@@ -15,7 +15,7 @@ You can also find all the examples on the following GitHub repository: https://g
 from acquifer.im04 import FileUtils, MetadataParser
 #from acquifer.im03 import FileUtils, MetadataParser # For an IM03 dataset, simply replace the import statement from the previous line with this line
 
-from acquifer.im   import ImageInfos
+from acquifer.im   import Metadatas
 from java.util     import Collections 
 from ij            import IJ
 
@@ -31,25 +31,25 @@ def printAligned(array):
 utils = FileUtils()
 listFiles = utils.getListImageFiles(image_directory)
 
-# Get ImageInfos
+# Get Metadatas
 parser = MetadataParser()
-listInfos = utils.getListImagesInfos(listFiles)
+listMetadatas = utils.getListMetadatas(listFiles)
 
 print "\nImages metadata (unsorted)"
-printAligned(listInfos)
+printAligned(listMetadatas)
 
-# Sort list of infos in the following order (well, subposition, timepoint, Z-slice, -channel), for channels reversed (CO6: Brightfield first)
+# Sort list of metadatas in the following order (well, subposition, timepoint, Z-slice, -channel), for channels reversed (CO6: Brightfield first)
 
 # Sort the list and store it in a new list (ie duplicated the data)
-sortedInfos = ImageInfos.sortCopy(listInfos)
+sortedMetadatas = Metadatas.sortCopy(listMetadatas)
 
 # Or sort the list in place
-ImageInfos.sort(listInfos)
+Metadatas.sort(listMetadatas)
 # equivalent to
-# Collections.sort(listInfos, ImageInfos.defaultOrder)
-# listInfos is initially a java ArrayList, which also has a .sort(Comparator) method, but in jython, it is overwritten by the .sort(callable) method
+# Collections.sort(listMetadatas, Metadatas.defaultOrder)
+# listMetadatas is initially a java ArrayList, which also has a .sort(Comparator) method, but in jython, it is overwritten by the .sort(callable) method
 
 
-IJ.log("Sorted copy == in-place sorted list :" + str(sortedInfos == listInfos))
+IJ.log("Sorted copy == in-place sorted list :" + str(sortedMetadatas == listMetadatas))
 print "\nImages metadata (sorted)"
-printAligned(sortedInfos)
+printAligned(sortedMetadatas)

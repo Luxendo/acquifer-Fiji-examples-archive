@@ -14,7 +14,7 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.im   import ImageInfos
+from acquifer.im   import Metadatas
 from acquifer.im04 import FileUtils, MetadataParser
 #from acquifer.im03 import FileUtils, MetadataParser # For an IM03 dataset, simply replace the import statment from the previous line with this line
 
@@ -53,11 +53,11 @@ printAligned(listFiltered)
 
 # Parse the metadata for the list of image files that were filtered
 parser = MetadataParser()
-listInfos = utils.getListImagesInfos(listFiltered)
+listMetadatas = utils.getListMetadatas(listFiltered)
 
 print "\nImages metadata"
-printAligned(listInfos)
+printAligned(listMetadatas)
 
 # List wells actually present in the dataset
 print "\nUnique wells"
-print ImageInfos.listUniqueWells(listInfos)
+print Metadatas.listUniqueWells(listMetadatas)
