@@ -1,5 +1,6 @@
 /*
- * This macro demonstrates how to use the plugin "Batch process hyperstack (script)" with an imageJ macro file (ie .ijm file saved on disk).
+ * This macro can be saved to disk and used as custom macro-file (.ijm) for the plugin "Batch process hyperstack (script)"
+ * 
  * In this example, we just display the names of the stack and Z-projection (if any) to the log window. 
  * 
  * Like for other scripting languages, the macro should have 2 script parameters for the inputs (stack and proj as below), except that here the variable stack and proj correspond to the images names, not to ImagePlus objects.

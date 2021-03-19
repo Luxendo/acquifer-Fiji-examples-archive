@@ -48,11 +48,11 @@ listZslice       = None
 listTimepoint    = None
 
 listFiltered = utils.getListImageFiles(image_directory, 
-										listWell, 
-										listSubpositions, 
-										listChannel, 
-										listZslice, 
-										listTimepoint)
+									   listWell, 
+									   listSubpositions, 
+									   listChannel, 
+									   listZslice, 
+									   listTimepoint)
 
 print "\nWith dimension filter"
 printAligned(listFiltered)
