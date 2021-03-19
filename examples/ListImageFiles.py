@@ -1,6 +1,12 @@
 """
 This jython script demonstrates how to list image files from an Imaging Machine experiment directory.
-The function getListImageFiles accept optional filters in the form of lists, to return only image files for a specific well, subposition, channel, timepoint or Z-slice.
+A similar result can be obtained in the macro language, using the "Batch Process Images (macro)" plugin, and using in the text input the following commands
+
+imagePath = getArgument(); // get image path for the current iteration
+print(imagePath)
+
+Back to jython, the code below uses the function getListImageFiles from acquifer.im04.FileUtils.
+This function accepts optional filters in the form of lists, to return only image files for a specific well, subposition, channel, timepoint or Z-slice.
 The list of files is then parsed to extract the metadata for each image file.
 
 The script relies on the acquifer-core java package, provided with the acquifer update site.
@@ -28,19 +34,19 @@ def printAligned(array):
 		print i
 
 utils = FileUtils()
-listFull = utils.getListImageFiles(image_directory) # without additional parameters, all IM03 image files are returned
+listFull = utils.getListImageFiles(image_directory) # without additional parameters, all IM image files are returned
 
 print "\nList of image files"
 printAligned(listFull)
 
 # Add filters for specific wells 
-# If none, no filter is applied for this dimension
-listSubpositions = None 
-listChannel = None
-listZslice = None
-listTimepoint = None
-
+# If none, no filter is applied for the given dimension
 listWell = ["A002","B001","B002","B003","B010"]
+listSubpositions = None 
+listChannel      = None
+listZslice       = None
+listTimepoint    = None
+
 listFiltered = utils.getListImageFiles(image_directory, 
 										listWell, 
 										listSubpositions, 
