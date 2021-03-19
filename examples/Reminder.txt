@@ -1,0 +1,1 @@
+Remember to add an entry to plugins.config with the ExampleOpener for every  example
