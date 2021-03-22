@@ -13,4 +13,4 @@
  */
 
 imagePath = getArgument(); // get image path for the current iteration of the Batch (macro) plugin
-print(imagePath)
+print(imagePath);

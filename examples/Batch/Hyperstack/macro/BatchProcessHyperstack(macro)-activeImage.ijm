@@ -35,7 +35,7 @@ run("Find Edges", "stack");
 // Save processed image to output directory indicated in the GUI
 // The Batch Process hyperstack plugin creates this directory if not existing
 outputDirectory = getDirectory("default");
-filename = originalTitle + "_edges"
+filename = originalTitle + "_edges";
 outPath = outputDirectory + filename;
 saveAs("Tiff", outPath);
 

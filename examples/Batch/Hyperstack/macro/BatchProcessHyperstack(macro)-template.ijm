@@ -18,9 +18,9 @@ Ext.splitArguments(imageTitles, stack, proj);  // recover the individual image n
 
 // Print the images titles
 // if the stack or the projection is not displayed, then its variable will be an empty string ("")
-print("\nNext well/subposition")
-print("title stack: ", stack)
-print("title proj: " , proj)
+print("\nNext well/subposition");
+print("title stack: ", stack);
+print("title proj: " , proj);
 
 
 // You can remove the "if" block if you know that you will always display the stack and/or projection
