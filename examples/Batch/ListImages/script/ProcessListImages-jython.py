@@ -28,8 +28,8 @@ imp = ImagePlus(filepath)
 
 # You can display the image, although everything can be done headless with the ImagePlus object
 imp.show()
-IJ.showStatus("Waiting 5secs before closing")
-time.sleep(5) # wait 10 secs
+IJ.log("\nWaiting 3 secs before closing image")
+time.sleep(3)
 imp.close()
 
 
