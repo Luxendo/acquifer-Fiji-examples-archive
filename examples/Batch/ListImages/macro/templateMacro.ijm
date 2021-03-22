@@ -13,7 +13,7 @@
  */
 imagePath = getArgument();
 
-setBatchMode("true"); // do not display images that will be opened, Comment this line with // to display images
+setBatchMode(true); // do not display images that will be opened, Comment this line with // to display images
 open(imagePath);     // if BatchMode is not set to true, this will display the image
 
 // Execute some commands ex: edge detection
