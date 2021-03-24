@@ -17,7 +17,9 @@ You can also __download single files__ by clicking the filename, then the "raw" 
 
 ## Documentation
 You can find more documentation about the different ressources used in these examples on the following pages:
-- [Hyperstack plugins](https://www.acquifer.de/resources/acquifer-fiji-utilities/hyperstack-fiji-plugins/)
+- [Batch-processing plugins](https://www.acquifer.de/fiji-batch-plugins/)
+- [Processing individual image-files in batch](https://www.acquifer.de/batch-files/)
+- [Hyperstack plugins](https://www.acquifer.de/hyperstack-fiji-plugins/)
 - [Acquifer Java packages](https://www.acquifer.de/resources/acquifer-java-packages/)
 - [acquifer-core](https://acquifer.github.io/acquifer-core/) java API documentation (compatible with any Java program)
 - [acquifer-IJ](https://acquifer.github.io/acquifer-IJ/) java API documentation (custom scripting ressources for ImageJ/Fiji) 
