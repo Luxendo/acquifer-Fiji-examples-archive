@@ -25,46 +25,46 @@ ID = Ext.getWellId(filename);
 print("Well Id :", ID);
 
 Ext.getWellColumn(filename, column);
-print("Plate column :", column);
+print("Plate column : ", column);
 
 row = Ext.getWellRow(filename);
-print("Plate row :", row);
+print("Plate row : ", row);
 
 Ext.getWellSubPosition(filename, subPos);
-print("Well subposition :", subPos);
+print("Well subposition : ", subPos);
 
 Ext.getWellIndex(filename, index);
-print("Well index (order of acquisition) :", index);
+print("Well index (order of acquisition) : ", index);
 
 Ext.getXYPosition(filename, X, Y);
 print("Positions (mm) X: ", X, " Y: ", Y);
 
 Ext.getZPosition(filename, Z);
-print("Position Z (um):",Z);
+print("Position Z (um) : ",Z);
 
 Ext.getZSlice(filename, slice);
-print("Z-slice", slice);
+print("Z-slice : ", slice);
 
 Ext.getLightPower(filename, power);
-print("Light power (%) :", power);
+print("Light power (%) : ", power);
 
 Ext.getLightExposure(filename, exposure);
-print("Exposure time (ms) :", exposure);
+print("Exposure time (ms) : ", exposure);
 
 Ext.getChannelIndex(filename, channel);
-print("Channel index :", channel);
+print("Channel index : ", channel);
 
 Ext.getObjectiveMagnification(filename, mag);
-print("Objective Magnification (X):", mag);
+print("Objective Magnification (X) : ", mag);
 
 Ext.getObjectiveNA(filename, NA);
-print("Objective NA :", NA);
+print("Objective NA : ", NA);
 
-Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ!!
+Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ, hence the different text-color
 print("Pixel Size (um) : ", pixSize);
 
 Ext.getLoopIteration(filename, iteration);
-print("Loop iteration", iteration);
+print("Loop iteration : ", iteration);
 
 Ext.getTemperature(filename, temp);
-print("Temperature (°C)", temp);
+print("Temperature (°C) : ", temp);
