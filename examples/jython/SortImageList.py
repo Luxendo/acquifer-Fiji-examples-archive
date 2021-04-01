@@ -29,11 +29,10 @@ def printAligned(array):
 		print i
 
 utils = FileUtils()
-listFiles = utils.getListImageFiles(image_directory)
 
 # Get Metadatas
 parser = MetadataParser()
-listMetadatas = utils.getListMetadatas(listFiles)
+listMetadatas = utils.getListMetadatas(image_directory)
 
 print "\nImages metadata (unsorted)"
 printAligned(listMetadatas)
