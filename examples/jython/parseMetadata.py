@@ -9,8 +9,8 @@ Changes to this file will thus NOT be saved, in particular the next time you ope
 Use File > Save As... to save a copy of this example, and keep your modifications.
 You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
 """
-from acquifer.im04 import MetadataParser
-#from acquifer.im03 import MetadataParser # Uncomment this line for IM03
+from acquifer.core.im04 import MetadataParser
+#from acquifer.core.im03 import MetadataParser # Uncomment this line for IM03
 
 parser = MetadataParser()
 

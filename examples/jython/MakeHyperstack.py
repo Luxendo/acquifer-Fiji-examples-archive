@@ -10,13 +10,13 @@ Changes to this file will thus NOT be saved, in particular the next time you ope
 Use File > Save As... to save a copy of this example, and keep your modifications.
 You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
 """
-from acquifer.im04         import FileUtils, MetadataParser
-from acquifer.im04.plugins import Hyperstack_Maker
+from acquifer.core.im04       import FileUtils, MetadataParser
+from acquifer.ij.im04.plugins import Hyperstack_Maker
 
 """
 # Use following imports for IM03
-from acquifer.im03         import FileUtils, MetadataParser
-from acquifer.im03.plugins import Hyperstack_Maker_IM03
+from acquifer.core.im03       import FileUtils, MetadataParser
+from acquifer.ij.im03.plugins import Hyperstack_Maker_IM03
 """
 inputDir = r"C:\Users\Laurent Thomas\Documents\Acquifer\DataSet\Fish\Clicking_AppNote96"
 

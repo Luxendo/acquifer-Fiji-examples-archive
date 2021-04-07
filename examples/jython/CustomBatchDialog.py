@@ -15,8 +15,8 @@ Changes to this file will thus NOT be saved, in particular the next time you ope
 Use File > Save As... to save a copy of this example, and keep your modifications.
 You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
 """
-from acquifer.im04 import BatchDialog 
-#from acquifer.im03 import BatchDialog # Uncomment for IM03
+from acquifer.ij.im04 import BatchDialog 
+#from acquifer.ij.im03 import BatchDialog # Uncomment for IM03
 from ij import IJ
 
 dialog = BatchDialog("Test batch dialog") 

@@ -3,7 +3,7 @@ This script demonstrates how to copy a full IM dataset, or only specific wells, 
 """
 #@ File (label="Dataset directory", style="directory") src
 #@ File (label="Target directory", style="directory") dst
-from acquifer.im04 import FileUtils
+from acquifer.core.im04 import FileUtils
 import os
 
 src = src.getPath()

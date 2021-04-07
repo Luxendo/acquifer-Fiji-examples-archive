@@ -20,9 +20,9 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.im   import Metadatas
-from acquifer.im04 import FileUtils, MetadataParser
-#from acquifer.im03 import FileUtils, MetadataParser # For an IM03 dataset, simply replace the import statment from the previous line with this line
+from acquifer.core.im   import Metadatas
+from acquifer.core.im04 import FileUtils, MetadataParser
+#from acquifer.core.im03 import FileUtils, MetadataParser # For an IM03 dataset, simply replace the import statment from the previous line with this line
 
 image_directory = image_directory.toString()
 

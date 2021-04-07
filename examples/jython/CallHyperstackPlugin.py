@@ -8,8 +8,8 @@ Changes to this file will thus NOT be saved, in particular the next time you ope
 Use File > Save As... to save a copy of this example, and keep your modifications.
 You can also find all the examples on the following GitHub repository: https://github.com/acquifer/Fiji-examples
 """
-from acquifer.im04.plugins import Hyperstack_Maker
-#from acquifer.im03.plugins import Hyperstack_Maker # Uncoment this line for IM03
+from acquifer.ij.im04.plugins import Hyperstack_Maker
+#from acquifer.ij.im03.plugins import Hyperstack_Maker # Uncoment this line for IM03
 
 # Call the plugin
 Hyperstack_Maker().run()
