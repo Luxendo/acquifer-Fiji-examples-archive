@@ -5,8 +5,7 @@ A sublist contains the images belinging to a given well position
 """
 #@ File (label="Dataset directory", style="directory") input_directory
 
-from acquifer.core.im04 import FileUtils, MetadataParser 
-from acquifer.core.im   import Metadatas
+from acquifer.core.im04 import FileUtils, MetadataParser, Metadatas
 
 def printSubLists(mainList): 
 	"""
