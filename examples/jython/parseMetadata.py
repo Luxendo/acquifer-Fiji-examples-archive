@@ -48,4 +48,4 @@ print "Pixel Size (um): ", parser.getPixelSize(filename)
 
 print "Loop iteration :", parser.getLoopIteration(filename)
 
-print "Temperature (°C)", parser.getTemperature(filename)
+print u"Temperature (°C)", parser.getTemperature(filename) # use unicode "u" string for special ° character
