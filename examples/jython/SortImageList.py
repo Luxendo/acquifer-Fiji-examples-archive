@@ -12,29 +12,22 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.core.im04 import FileUtils, MetadataParser, Metadatas
+from acquifer.core.im04 import FileUtils, Metadatas
 #from acquifer.core.im03 import FileUtils, MetadataParser, Metadatas # For an IM03 dataset, simply replace the import statement from the previous line with this line
+from acquifer.ij.Utils import printArray # print each item of a list to a new line in the log window (more readable)
 
 from java.util        import Collections 
 from ij               import IJ
 
 image_directory = image_directory.toString()
 
-def printAligned(array):
-	"""
-	This function is designed to print each elements of an array on a new line.
-	""" 
-	for i in array:
-		print i
-
 utils = FileUtils()
 
 # Get Metadatas
-parser = MetadataParser()
 listMetadatas = utils.getListMetadatas(image_directory)
 
-print "\nImages metadata (unsorted)"
-printAligned(listMetadatas)
+IJ.log("\nImages metadata (unsorted)")
+printArray(listMetadatas)
 
 # Sort list of metadatas in the following order (well, subposition, timepoint, Z-slice, -channel), for channels reversed (CO6: Brightfield first)
 
@@ -49,5 +42,5 @@ Metadatas.sort(listMetadatas)
 
 
 IJ.log("Sorted copy == in-place sorted list :" + str(sortedMetadatas == listMetadatas))
-print "\nImages metadata (sorted)"
-printAligned(sortedMetadatas)
+IJ.log("\nImages metadata (sorted)")
+printArray(sortedMetadatas)

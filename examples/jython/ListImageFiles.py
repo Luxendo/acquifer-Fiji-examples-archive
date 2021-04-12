@@ -20,27 +20,22 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.core.im04 import FileUtils, MetadataParser, Metadatas
-#from acquifer.core.im03 import FileUtils, MetadataParser, Metadatas # For an IM03 dataset, simply replace the import statment from the previous line with this line
+from acquifer.core.im04 import FileUtils, Metadatas
+#from acquifer.core.im03 import FileUtils, Metadatas # For an IM03 dataset, simply replace the import statment from the previous line with this line
+from acquifer.ij.Utils import printArray # print each item of a list to a new line in the log window (more readable)
+from ij import IJ
 
 image_directory = image_directory.toString()
-
-def printAligned(array):
-	"""
-	This function just print each elements of an array on a new line for better visibility.
-	""" 
-	for i in array:
-		print i
 
 utils = FileUtils()
 listFull = utils.getListImageFiles(image_directory) # without additional parameters, all IM image files are returned
 
-print "\nList of image files"
-printAligned(listFull)
+IJ.log("\nList of image files")
+printArray(listFull)
 
 # Add filters for specific wells 
 # If none, no filter is applied for the given dimension
-listWell = ["A002","B001","B002","B003","B010"]
+listWell = ["B002"]
 listSubpositions = None 
 listChannel      = None
 listZslice       = None
@@ -53,16 +48,15 @@ listFiltered = utils.getListImageFiles(image_directory,
 									   listZslice, 
 									   listTimepoint)
 
-print "\nWith dimension filter"
-printAligned(listFiltered)
+IJ.log("\nWith dimension filter")
+printArray(listFiltered)
 
 # Parse the metadata for the list of image files that were filtered
-parser = MetadataParser()
 listMetadatas = utils.getListMetadatas(listFiltered)
 
-print "\nImages metadata"
-printAligned(listMetadatas)
+IJ.log("\nImages metadata")
+printArray(listMetadatas)
 
-# List wells actually present in the dataset
-print "\nUnique wells"
-print Metadatas.listUniqueWells(listMetadatas)
+# List wells actually present in the dataset
+IJ.log("\nUnique wells")
+printArray(Metadatas.listUniqueWells(listMetadatas))
