@@ -1,7 +1,7 @@
 """
 From a list of images and associated metadatas, group images belonging to the same well positions
 The result is a list containing one sublists per well subpositions.
-A sublist contains the images belinging to a given well position
+A sublist contains the images belonging to a given well position
 """
 #@ File (label="Dataset directory", style="directory") input_directory
 

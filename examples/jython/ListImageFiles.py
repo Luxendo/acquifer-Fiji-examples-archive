@@ -54,7 +54,7 @@ printArray(listFiltered)
 # Parse the metadata for the list of image files that were filtered
 listMetadatas = utils.getListMetadatas(listFiltered)
 
-IJ.log("\nImages metadata")
+IJ.log("\nImages metadata")
 printArray(listMetadatas)
 
 # List wells actually present in the dataset
