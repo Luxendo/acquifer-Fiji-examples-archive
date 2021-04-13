@@ -1,6 +1,6 @@
 # Fiji-scripting with the ACQUIFER tools
-Example macros (.ijm) and jython scripts (.py) demonstrating useful functions provided by the Acquifer update site in Fiji, or more generally by the acquifer java packages.  
-Some of these examples are also shipped with the acquifer update site, and are available in the menu *Acquifer > Examples*.  
+Example macros (.ijm) and jython scripts (.py) demonstrating useful functions provided by the [ACQUIFER update site](https://www.acquifer.de/resources/acquifer-fiji-utilities/) in Fiji (freely available upon [request](https://www.acquifer.de/resources/acquifer-fiji-utilities/activate-update-site/)), or more generally by the [ACQUIFER java packages](https://www.acquifer.de/resources/acquifer-java-packages/).  
+Some of these examples are also shipped by the update site, and are available in the menu *Acquifer > Examples*.  
 
 The examples can be opened and run in Fiji, by drag and dropping the script file on the Fiji window.  
 Currently for the ImageJ macro-language, the examples cover the extraction of metadata from the image file name (see *examples > MetadataParsing*).  
