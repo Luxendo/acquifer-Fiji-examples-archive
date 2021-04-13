@@ -12,8 +12,8 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.core.im04 import FileUtils, Metadatas
-#from acquifer.core.im03 import FileUtils, MetadataParser, Metadatas # For an IM03 dataset, simply replace the import statement from the previous line with this line
+from acquifer.core.im04 import FileUtils, Metadata
+#from acquifer.core.im03 import FileUtils, MetadataParser, Metadata # For an IM03 dataset, simply replace the import statement from the previous line with this line
 from acquifer.ij.Utils import printArray # print each item of a list to a new line in the log window (more readable)
 
 from java.util        import Collections 
@@ -23,7 +23,7 @@ image_directory = image_directory.toString()
 
 utils = FileUtils()
 
-# Get Metadatas
+# Get Metadata
 listMetadatas = utils.getListMetadatas(image_directory)
 
 IJ.log("\nImages metadata (unsorted)")
@@ -32,12 +32,12 @@ printArray(listMetadatas)
 # Sort list of metadatas in the following order (well, subposition, timepoint, Z-slice, -channel), for channels reversed (CO6: Brightfield first)
 
 # Sort the list and store it in a new list (ie duplicated the data)
-sortedMetadatas = Metadatas.sortCopy(listMetadatas)
+sortedMetadatas = Metadata.sortCopy(listMetadatas)
 
 # Or sort the list in place
-Metadatas.sort(listMetadatas)
+Metadata.sort(listMetadatas)
 # equivalent to
-# Collections.sort(listMetadatas, Metadatas.defaultOrder)
+# Collections.sort(listMetadatas, Metadata.defaultOrder)
 # listMetadatas is initially a java ArrayList, which also has a .sort(Comparator) method, but in jython, it is overwritten by the .sort(callable) method
 
 

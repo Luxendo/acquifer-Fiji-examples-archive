@@ -5,7 +5,7 @@ A sublist contains the images belonging to a given well position
 """
 #@ File (label="Dataset directory", style="directory") input_directory
 
-from acquifer.core.im04 import FileUtils, Metadatas
+from acquifer.core.im04 import FileUtils, Metadata
 
 def printSubLists(mainList): 
 	"""
@@ -19,7 +19,7 @@ def printSubLists(mainList):
 
 utils = FileUtils()
 input_directory = input_directory.getPath()
-listMetadatas = utils.getListMetadatas(input_directory) # Get Metadatas 
-groupedImages = Metadatas.groupByWellPositions(listMetadatas) 
+listMetadatas = utils.getListMetadatas(input_directory) # Get Metadata 
+groupedImages = Metadata.groupByWellPositions(listMetadatas) 
 
 printSubLists(groupedImages)

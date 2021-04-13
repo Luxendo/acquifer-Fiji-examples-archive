@@ -20,8 +20,8 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.core.im04 import FileUtils, Metadatas
-#from acquifer.core.im03 import FileUtils, Metadatas # For an IM03 dataset, simply replace the import statment from the previous line with this line
+from acquifer.core.im04 import FileUtils, Metadata
+#from acquifer.core.im03 import FileUtils, Metadata # For an IM03 dataset, simply replace the import statment from the previous line with this line
 from acquifer.ij.Utils import printArray # print each item of a list to a new line in the log window (more readable)
 from ij import IJ
 
@@ -59,4 +59,4 @@ printArray(listMetadatas)
 
 # List wells actually present in the dataset
 IJ.log("\nUnique wells")
-printArray(Metadatas.listUniqueWells(listMetadatas))
+printArray(Metadata.listUniqueWells(listMetadatas))

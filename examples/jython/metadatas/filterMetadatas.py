@@ -1,7 +1,7 @@
 """
 This jython script demonstrates how to list images and their dimension-metadatas from a directory of images.
-The list of images and metadatas (actually a list of Metadatas objects) is then filtered to keep only specific dimensions.
-It also shows how to recover the set of unique wells present in a list of Metadatas objects
+The list of images and metadatas (actually a list of Metadata objects) is then filtered to keep only specific dimensions.
+It also shows how to recover the set of unique wells present in a list of Metadata objects
 
 The script relies on the acquifer-core java package, provided with the acquifer update site.
 This script can be run in the Fiji script editor, and requires a dataset of IM images.
@@ -14,8 +14,8 @@ You can also find all the examples on the following GitHub repository: https://g
 """
 #@ File (label="Select an IM directory", style="directory") image_directory
 
-from acquifer.core.im04 import FileUtils, Metadatas
-#from acquifer.core.im03 import FileUtils, Metadatas # For an IM03 dataset, simply replace the import statment from the previous line with this line
+from acquifer.core.im04 import FileUtils, Metadata
+#from acquifer.core.im03 import FileUtils, Metadata # For an IM03 dataset, simply replace the import statment from the previous line with this line
 from acquifer.ij.Utils  import printArray
 from ij import IJ
 
@@ -32,8 +32,8 @@ filterChannels     = []
 filterZslices      = [1]
 filterTimepoints   = []
 
-filteredByWell         = Metadatas.filterWells(listFull, filterWells)
-filteredMultiDimension = Metadatas.filter(listFull,
+filteredByWell         = Metadata.filterWells(listFull, filterWells)
+filteredMultiDimension = Metadata.filter(listFull,
 										  filterWells,
 										  filterSubPositions,
 										  filterChannels,     
@@ -46,6 +46,6 @@ print len(filteredMultiDimension)
 print "See log window for list of filtered metadatas"
 printArray(filteredMultiDimension)
 
-print Metadatas.listUniqueWells(listFull) 
-print Metadatas.listUniqueWells(filteredByWell) 
-print Metadatas.listUniqueWells(filteredMultiDimension)
+print Metadata.listUniqueWells(listFull) 
+print Metadata.listUniqueWells(filteredByWell) 
+print Metadata.listUniqueWells(filteredMultiDimension)
