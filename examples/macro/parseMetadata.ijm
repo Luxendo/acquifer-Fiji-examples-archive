@@ -40,7 +40,7 @@ Ext.getXYPosition(filename, X, Y);
 print("Positions (mm) X: ", X, " Y: ", Y);
 
 Ext.getZPosition(filename, Z);
-print("Position Z (um) : ",Z);
+print("Position Z (mm) : ",Z);
 
 Ext.getZSlice(filename, slice);
 print("Z-slice : ", slice);

@@ -30,7 +30,7 @@ print "Well subposition :", parser.getWellSubPosition(filename)
 print "Well index (order of acquisition) :", parser.getWellIndex(filename)
 
 print "Positions XY (mm): ", parser.getXYPosition(filename).tolist()
-print "Position Z (um): ",   parser.getZPosition(filename)
+print "Position Z (mm): ",   parser.getZPosition(filename)
 
 print "Z-slice Number : ", parser.getZSlice(filename)
 
