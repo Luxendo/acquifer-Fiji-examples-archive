@@ -1,11 +1,7 @@
 """
-This jython script demonstrates how to inspect the content of a dataset to find the uniques values available for each dimensions
-More precisely, it shows how to find unique wells, subpositions, channels, z-slices and timepoints available
+This jython script demonstrates how to inspect the content of a dataset to find the uniques values available for each dimensions.
+More precisely, it shows how to find unique wells, subpositions, channels, z-slices and timepoints available.
 and/or how many unique values are available for each dimensions
-
-The script relies on the acquifer-core java package, provided with the acquifer update site.
-This script can be run in the Fiji script editor, and requires a dataset of IM images.
-Similar scripts in other scripting language can be written by adapting the import statements and general syntax.
 
 NOTE : When open via the menu ACQUIFER > Examples, this script file opens as a temporary file.
 Changes to this file will thus NOT be saved, in particular the next time you open this example via the menu, the original example will be shown.
@@ -22,7 +18,7 @@ from acquifer.ij.Utils import printArray # print each item of a list to a new li
 image_directory = image_directory.toString()
 
 utils = FileUtils()
-listFull = utils.getListMetadatas (image_directory) # without additional parameters, all IM image files are returned
+listFull = utils.getListMetadatas(image_directory) # without additional parameters, all IM image files are returned
 
 print "Sizes"
 print Metadata.dimensionsSizes([])
