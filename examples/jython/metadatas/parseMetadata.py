@@ -46,6 +46,6 @@ print "Objective NA :", parser.getObjectiveNA(filename)
 
 print "Pixel Size (um): ", parser.getPixelSize(filename)
 
-print "Loop iteration :", parser.getLoopIteration(filename)
+print "Timepoint :", parser.getTimepoint(filename)
 
 print u"Temperature (°C)", parser.getTemperature(filename) # use unicode "u" string for special ° character

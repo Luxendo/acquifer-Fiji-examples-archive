@@ -63,8 +63,8 @@ print("Objective NA : ", NA);
 Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ, hence the different text-color
 print("Pixel Size (um) : ", pixSize);
 
-Ext.getLoopIteration(filename, iteration);
-print("Loop iteration : ", iteration);
+Ext.getTimepoint(filename, timepoint);
+print("Timepoint : ", timepoint);
 
 Ext.getTemperature(filename, temp);
 print("Temperature (°C) : ", temp);
