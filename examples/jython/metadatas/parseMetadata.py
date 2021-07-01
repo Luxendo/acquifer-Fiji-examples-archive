@@ -12,9 +12,10 @@ You can also find all the examples on the following GitHub repository: https://g
 from acquifer.core.im04 import MetadataParser
 #from acquifer.core.im03 import MetadataParser # Uncomment this line for IM03
 
-parser = MetadataParser()
+parser = MetadataParser.getInstance() # recover the unique instance of MetadataParser (singleton design)
 
-filename = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif";
+# Set an example filename
+filename = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif"
 # Uncomment the following line for IM03
 #filename = "WE00019---B006--PO01--LO001--CO6--SL010--PX16250--PW0040--IN0020--TM246--X059308--Y019906--Z212725--T1375564662.tif" # example filename
 
