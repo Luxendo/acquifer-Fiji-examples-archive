@@ -22,7 +22,7 @@ from acquifer.ij.Utils  import printArray
 image_directory = image_directory.toString()
 
 utils = FileUtils()
-listFull = utils.getListMetadatas(image_directory).tolist() # list IM files and parse dimensions metadatas
+listFull = utils.getListMetadatas(image_directory) # list IM files and parse dimensions metadatas
 
 # Filter the List<Metdata> 
 filterWells        = ["B001","B002"]
