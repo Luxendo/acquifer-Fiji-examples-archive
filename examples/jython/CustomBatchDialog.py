@@ -43,7 +43,12 @@ if dialog.wasOKed():
 	print "channels: "      ,  dialog.getChannels()
 	print "Z-slice: "       ,  dialog.getZslice()
 	print "Timepoints: "    ,  dialog.getTimepoints()
-
+	
+	# We can also recover the dataset object matching the selected dimensions
+	# Use dataset.getListImagePlanes to recover the images in the dataset, see Examples > data-structures
+	dataset = dialog.getMatchingDataset()
+	print "\n", dataset
+	
 	# Finally we can get the custom string field
 	stringField = dialog.getNextString()
 	print "Custom string input: ", stringField
