@@ -24,28 +24,42 @@ image_directory = image_directory.toString()
 utils = FileUtils()
 listFull = utils.getListMetadatas(image_directory) # list IM files and parse dimensions metadatas
 
-# Filter the List<Metdata> 
+# Original list of metadata
+print "\nUnfiltered list"
+print len(listFull), "images"
+print "Wells : ", Metadata.listUniqueWells(listFull) 
+
+
+
+# Option 1 : Filter by well position
+print "\nFilter by well position"
+
 filterWells        = ["B001","B002"]
 #filterWells        = [] # empty list as filter should return all wells
+
+filteredByWell = Metadata.filterWells(listFull, filterWells)
+print len(filteredByWell), " images"
+print "Wells: ", Metadata.listUniqueWells(filteredByWell) 
+
+
+
+# Option 2: Filterwith mulitple dimensions
+print "\nFilter by with multiple dimensions"
+# for wells use the same as above
 filterSubPositions = []
 filterChannels     = []
 filterZslices      = [1]
 filterTimepoints   = []
 
-filteredByWell         = Metadata.filterWells(listFull, filterWells)
 filteredMultiDimension = Metadata.filter(listFull,
 										  filterWells,
 										  filterSubPositions,
 										  filterChannels,     
 										  filterZslices,      
 										  filterTimepoints)
-print len(listFull)
-print len(filteredByWell)
-print len(filteredMultiDimension)
+										  
+print len(filteredMultiDimension), " images"
+print "Wells: ", Metadata.listUniqueWells(filteredMultiDimension)
 
 print "See log window for list of filtered metadatas"
 printArray(filteredMultiDimension)
-
-print Metadata.listUniqueWells(listFull) 
-print Metadata.listUniqueWells(filteredByWell) 
-print Metadata.listUniqueWells(filteredMultiDimension)
