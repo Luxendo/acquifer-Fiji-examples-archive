@@ -44,3 +44,4 @@ Metadata.sort(listMetadatas)
 IJ.log("Sorted copy == in-place sorted list :" + str(sortedMetadatas == listMetadatas))
 IJ.log("\nImages metadata (sorted)")
 printArray(sortedMetadatas)
+print "See log window"
