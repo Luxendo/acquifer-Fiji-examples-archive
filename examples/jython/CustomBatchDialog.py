@@ -5,7 +5,7 @@ in addition to custom functionalities.
 You can also use some functions available with the BatchDialog class, with custom GenericDialog
 
 You can consult the GenericDialog API documentation at: 
-https://imagej.nih.gov/ij/developer/api/ij/gui/GenericDialog.html
+https://imagej.nih.gov/ij/developer/api/ij/ij/gui/GenericDialog.html
 
 and the BatchDialog API documentation at: 
 https://acquifer.github.io/acquifer-IJ/acquifer/im/BatchDialog.html
