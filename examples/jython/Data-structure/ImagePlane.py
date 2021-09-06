@@ -11,11 +11,11 @@ print "Image Plane :", plane
  
 # Just like wit the MetadataParser, one can recover metadata from an ImagePlane 
 print "\nDimensions indexes : "
-print "Channel :",    plane.getChannel() 
-print "Z-slice :",    plane.getZslice() 
-print "Timepoint: ",  plane.getTimepoint() 
-print "Pixel-size: ", plane.getPixelSize() , "um" 
-print "Directory: ",  plane.getDirectoryName() 
+print "- Channel :",    plane.getChannel() 
+print "- Z-slice :",    plane.getZslice() 
+print "- Timepoint: ",  plane.getTimepoint() 
+print "- Pixel-size: ", plane.getPixelSize() , "um" 
+print "- Directory: ",  plane.getDirectoryName() 
  
 # Other possible commands 
 # Note some attributes (temperature, timepoint...) are read-only attributes 
