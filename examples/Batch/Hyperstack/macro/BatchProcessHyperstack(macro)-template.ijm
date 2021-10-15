@@ -13,14 +13,14 @@
  */
 
 run("Acquifer IM04 macro extensions");         // provides the Ext.splitArguments function
-imageTitles = getArgument();                   // this is a single string which can be in the form "yourStack, yourProj", "yourStack" (only stack displayed), or ",yourProj" if only projection is displayed  
-Ext.splitArguments(imageTitles, stack, proj);  // recover the individual image names as separate variables
+image_titles = getArgument();                   // this is a single string which can be in the form "yourStack, yourProj", "yourStack" (only stack displayed), or ",yourProj" if only projection is displayed  
+Ext.splitArguments(image_titles, stack, projection);  // recover the individual image names as separate variables
 
 // Print the images titles
 // if the stack or the projection is not displayed, then its variable will be an empty string ("")
 print("\nNext well/subposition");
 print("title stack: ", stack);
-print("title proj: " , proj);
+print("title projection: " , projection);
 
 
 // You can remove the "if" block if you know that you will always display the stack and/or projection
@@ -30,8 +30,8 @@ if (stack != ""){
 	// other commands of your choice
 }
 
-if (proj != ""){
+if (projection != ""){
 	print("Process projection");
-	selectImage(proj);
+	selectImage(projection);
 	// other commands of your choice
 }

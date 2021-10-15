@@ -16,55 +16,55 @@
 run("Acquifer IM04 macro extensions");  // this line is necessary to have access to the acquifer macro-functions via the Ext mechanism
 //run("Acquifer IM03 macro extensions"); // uncomment this line for IM03
 
-filename = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif";
-//filename = "WE00020---B005--PO01--LO001--CO6--SL010--PX16250--PW0040--IN0020--TM246--X050299--Y019906--Z212275--T1375574652.tif"; // uncomment this line for IM03
+image_name = "-A002--PO01--LO001--CO6--SL001--PX32500--PW0080--IN0020--TM281--X023590--Y011262--Z211710--T0200262822--WE00002.tif";
+//image_name = "WE00020---B005--PO01--LO001--CO6--SL010--PX16250--PW0040--IN0020--TM246--X050299--Y019906--Z212275--T1375574652.tif"; // uncomment this line for IM03
 
-print("Image name :", filename);
+print("Image name :", image_name);
 
-ID = Ext.getWellId(filename);
+ID = Ext.getWellId(image_name);
 print("Well Id :", ID);
 
-Ext.getWellColumn(filename, column);
+Ext.getWellColumn(image_name, column);
 print("Plate column : ", column);
 
-row = Ext.getWellRow(filename);
+row = Ext.getWellRow(image_name);
 print("Plate row : ", row);
 
-Ext.getWellSubPosition(filename, subPos);
-print("Well subposition : ", subPos);
+Ext.getWellSubPosition(image_name, subposition);
+print("Well subposition : ", subposition);
 
-Ext.getWellIndex(filename, index);
-print("Well index (order of acquisition) : ", index);
+Ext.getWellIndex(image_name, well_index);
+print("Well index (order of acquisition) : ", well_index);
 
-Ext.getXYPosition(filename, X, Y);
-print("Positions (mm) X: ", X, " Y: ", Y);
+Ext.getXYPosition(image_name, x_mm, y_mm);
+print("Positions (mm) X: ", x_mm, " Y: ", y_mm);
 
-Ext.getZPosition(filename, Z);
-print("Position Z (mm) : ",Z);
+Ext.getZPosition(image_name, z_mm);
+print("Position Z (mm) : ", z_mm);
 
-Ext.getZSlice(filename, slice);
-print("Z-slice : ", slice);
+Ext.getZSlice(image_name, z_slice);
+print("Z-slice : ", z_slice);
 
-Ext.getLightPower(filename, power);
-print("Light power (%) : ", power);
+Ext.getLightPower(image_name, light_power);
+print("Light power (%) : ", light_power);
 
-Ext.getLightExposure(filename, exposure);
-print("Exposure time (ms) : ", exposure);
+Ext.getLightExposure(image_name, light_exposure);
+print("Exposure time (ms) : ", light_exposure);
 
-Ext.getChannelIndex(filename, channel);
+Ext.getChannelIndex(image_name, channel);
 print("Channel index : ", channel);
 
-Ext.getObjectiveMagnification(filename, mag);
-print("Objective Magnification (X) : ", mag);
+Ext.getObjectiveMagnification(image_name, magnification);
+print("Objective Magnification (X) : ", magnification);
 
-Ext.getObjectiveNA(filename, NA);
-print("Objective NA : ", NA);
+Ext.getObjectiveNA(image_name, objective_NA);
+print("Objective NA : ", objective_NA);
 
-Ext.getPixelSize(filename, pixSize); // this function also exists in ImageJ, hence the different text-color
-print("Pixel Size (um) : ", pixSize);
+Ext.getPixelSize(image_name, pixel_size_um); // this function also exists in ImageJ, hence the different text-color
+print("Pixel Size (um) : ", pixel_size_um);
 
-Ext.getTimepoint(filename, timepoint);
+Ext.getTimepoint(image_name, timepoint);
 print("Timepoint : ", timepoint);
 
-Ext.getTemperature(filename, temp);
-print("Temperature (°C) : ", temp);
+Ext.getTemperature(image_name, temperature);
+print("Temperature (°C) : ", temperature);
