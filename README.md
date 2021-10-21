@@ -1,4 +1,5 @@
 # Fiji-scripting with the ACQUIFER tools
+## Archived : this repo was moved to acquifer/acquifer-IJ-examples which wraps the examples in a jar.  
 Example macros (.ijm) and jython scripts (.py) demonstrating useful functions provided by the [ACQUIFER update site](https://www.acquifer.de/resources/acquifer-fiji-utilities/) in Fiji (freely available upon [request](https://www.acquifer.de/resources/acquifer-fiji-utilities/activate-update-site/)), or more generally by the [ACQUIFER java packages](https://www.acquifer.de/resources/acquifer-java-packages/).  
 Some of these examples are also shipped by the update site, and are available in the menu *Acquifer > Examples*.  
 
